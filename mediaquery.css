@@ -1,0 +1,446 @@
+@media all and (min-width: 1200px)
+{
+    body{
+        /* background-image: url(Layout/solido/1200.png); */
+        background-repeat: no-repeat;
+        background-position: left;
+        background-position: top;
+      
+      }
+    .box-container{
+        width: 1200px;
+        height: 600px;
+        grid-template-columns: 295px 905px;
+        grid-template-rows: 230px 420px 50px;
+        grid-template-areas: 
+            "info-box header"
+            "info-box portfolio-gallery-box"
+            "footer footer";
+    }
+    .header{
+        grid-template-columns: 687px 198px;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "header-title main-nav";
+        align-items: end;
+    }
+        .header-title{
+            margin-left: 20px;
+            padding-left: 31.5px;
+            height: 160px;
+        }
+            #avatar{
+                right: 80px;
+            }
+
+    .gallery-container{
+        width: 750px;
+        }
+        #next {
+            right: -205px;
+          }
+        #prev{
+            left: 20px;
+          }
+}
+@media all and (max-width: 1200px)
+{
+    body{
+        /* background-image: url(Layout/solido/1024.png); */
+        background-repeat: no-repeat;
+        background-position: left;
+        background-position: top;   
+    }
+
+    .box-container{
+        width: 1024px;
+        height: 600px;
+        grid-template-columns: 295px 729px;
+        grid-template-rows: 230px 420px;
+        grid-template-areas: 
+            "info-box header"
+            "info-box portfolio-gallery-box";
+    }
+    .header{
+        grid-template-columns: 512px 198px;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "header-title main-nav";
+        align-items: end;
+    }
+        .header-title{
+            margin-left: 20px;
+            padding-left: 31.5px;
+            height: 160px;
+        }
+            #avatar{
+                right: 30px;
+            }
+    .gallery-container{
+        width: 580px;
+        }
+        #next {
+            right: -28px;
+          }
+        #prev{
+            left: 20px;
+          }
+}
+
+@media all and (max-width: 1024px)
+{
+    body{
+        /* background-image: url(Layout/solido/768.png); */
+        background-repeat: no-repeat;
+        background-position: left;
+        background-position: top;
+      }
+    .box-container{
+        width: 768px;
+        height: 600px;
+        grid-template-columns: 250px 499px;
+        grid-template-rows: 230px 420px;
+        grid-template-areas: 
+            "info-box header"
+            "info-box portfolio-gallery-box";
+    }
+    .header{
+        grid-template-columns: 500px ;
+        grid-template-rows: 162px 68px;
+        grid-template-areas:
+            "header-title"
+            "main-nav";
+        align-items: end;
+    }
+        .header-title{
+            margin-left: 20px;
+            padding-left: 17px;
+            height: 118px;
+            margin-bottom: 18px;
+        }
+            #avatar{
+                right: 45px;
+                width: 130px;
+            }
+            #main-title{
+                margin-top: 50px;
+            }
+            #sub-title{
+                color: #A5A6A6;
+                top: 85px;
+            }
+
+
+            .main-nav{
+                height: 48px;
+                margin: 0 0 10px 20px;
+                text-align: right;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+    .portfolio-gallery-box{
+        margin-left: 20px;
+    }
+    .gallery-container{
+        width: 420px;
+        }
+        .controls p{
+            font-size: 1.8em;
+        }
+        #next {
+            right: 200px;
+          }
+        #prev{
+            left: -3px;
+          }
+
+    .btn-skills {
+        width: 90px;
+        font-size: 12px;
+        padding: 2px 0;
+    }
+    .link-box{
+        font-size: 14px;
+    }
+}
+
+
+
+@media all and (max-width: 768px)
+{
+    body{
+        /* background-image: url(Layout/solido/448.png); */
+        background-repeat: no-repeat;
+        background-position: left;
+        background-position: top;
+      }
+    h4{
+        font-size: 14px;
+    }
+
+
+    .box-container{
+        width: 440px;
+        height: 100%;
+        margin-top: 0; 
+        grid-template-columns: 440px;
+        grid-template-rows: 230px 420px 300px;
+        grid-template-areas: 
+            "header "
+            "info-box"
+            "portfolio-gallery-box";
+    }
+    .header{
+        margin: 0;
+        grid-template-columns: 440px ;
+        grid-template-rows: 162px 68px;
+        grid-template-areas:
+            "header-title"
+            "main-nav";
+        align-items: end;
+    }
+
+        .header-title{
+            margin-left: 0;
+            padding-left: 17px;
+            height: 118px;
+            margin-bottom: 0;
+        }
+            #avatar{
+                right: 45px;
+                width: 130px;
+            }
+            #main-title{
+                margin-top: 50px;
+            }
+            #sub-title{
+                color: #A5A6A6;
+            }
+        .main-nav{
+            margin-left: 0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.459);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+            #avatar-mini{
+                display: none;
+            }
+
+    .info-box {
+        width: 100%;
+        margin: 2px 0 0 0;
+        height: 520px;
+    }
+    .info-description{
+        display: grid;
+        padding-left: 20px;
+        padding-bottom: 4px;
+        grid-template-columns: 75% 25%;
+        grid-template-rows: 25px 25px;
+        grid-template-areas: 
+            "info-box-name info-btn"
+            "info-box-name-city info-btn";
+    }
+    .info-box-name{
+        grid-area: info-box-name;
+    }
+    .info-box-name-city{
+        grid-area: info-box-name-city;
+        display: flex;
+        flex-direction: row;
+    }
+    .info-box-name{
+        text-align: left;
+    }
+    .info-box-name-city h4{
+        margin: 0 5px 0 0;
+    }
+
+        #contact-link{
+            grid-area: info-btn;
+            width: 100px;
+            height: 30px;
+        }
+
+
+    .labels-skills{
+        display: grid;
+        grid-row-gap:5px;
+        grid-template-columns: 25% 25% 25%;
+        grid-template-rows: 27px 27px;
+        grid-template-areas:
+            "html css javascript"
+            "figma photoshop php";
+    }
+    .controls{
+        top: 800px;
+    }
+    .portfolio-gallery-box{
+        margin-left: 0;
+    }
+    .gallery-container{
+        width: 200px;
+        height: 300px;
+        }
+        #next {
+            right: 313px;
+          }
+        #prev{
+            left: 73px;
+          }
+}
+
+@media all and (max-width: 448px)
+{
+    body{
+        /* background-image: url(Layout/solido/288.png); */
+        background-repeat: no-repeat;
+        background-position: left;
+        background-position: top;
+      
+      }
+        .box-container{
+            width: 90vw;
+            grid-template-rows: 270px 420px 500px;
+        }
+        .header{
+            grid-template-columns: 90vw ;
+            grid-template-rows: 202px 68px;
+            grid-template-areas:
+            "header-title"
+            "main-nav";
+            }
+
+            .header-title{
+                margin-left: 0;
+                padding-left: 0;
+                height: 168px;
+                margin-bottom: 0;
+                grid-area: header-title;
+            }
+                #main-title{
+                    margin-top: 20px;
+                }
+                #sub-title{
+                    color: #A5A6A6;
+                    position: static;
+                }
+                .header-title h1, .header-title h4{
+                    text-align: center;
+                }
+                #avatar{
+                    right: 35px;
+                    width: 75px;
+                    opacity: 0.8;
+                }
+
+            .main-nav{
+                margin-left: 0;
+                border-radius: 10px;
+                background: rgb(255, 255, 255);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                grid-area: main-nav;
+                align-items: center;
+            }      
+                .main-nav .flag-icon{
+                    width: 24px;
+                }
+                .main-nav .contact-portfolio{
+                    width: 80px;
+                    font-size: 10px;
+                    margin-bottom: 0;
+                    height: 24px;
+                }
+
+        .info-box {
+            width: 90vw;
+        }
+        .info-description{
+            margin-left: 0;
+            grid-template-columns: 55vw 25vw;
+            padding: 10px;
+
+        } 
+            .info-box-name{
+                font-size: 16px;
+            }
+            .info-box-name-city h4, .info-box-name-city p{
+                font-size: 12px;
+            }
+            #contact-link{
+                align-self: center;
+                width: 100%;
+                padding: 6px 6px;
+                font-size: 0.75em;
+            }
+
+        .labels-skills{
+            font-size: 10px;
+            grid-template-columns: 40% 20% 40%;
+            grid-template-rows: 27px 27px 27px;
+            grid-template-areas:
+                "html . css"
+                "javascript . photoshop"
+                "figma . php";
+            justify-content: space-around;
+        }
+            #css{
+                justify-self: right;
+            }
+            #photoshop{
+                justify-self: right;
+            }
+            #php{
+                justify-self: right;
+            }
+        .info-skills{
+            padding: 0 10px 10px 10px;
+        }
+        .labels-skills_NO{
+            display: grid;
+            grid-row-gap:5px;
+        }
+
+        .controls{
+            position: static;
+            width: 70px; 
+            height: 0;         
+            margin: auto;
+        }
+
+        .portfolio-gallery-box{
+            width: 90vw;
+            height: 400px;
+        }
+            #next, #prev {
+                position: relative;
+                top:-180px;
+                z-index: 99;
+              }
+            #prev{
+                left: -120px;
+              }
+            #next{
+                right: -120px;
+            }
+
+}
+
+@media all and (max-width: 280px)
+{
+    .main-nav .flag-icon{
+        width: 14px;
+    }
+    .info-box-name{
+        font-size: 14px;
+    }
+    .info-box-name-city h4, .info-box-name-city p{
+        font-size: 10px;
+    }
+    .footer{
+        font-size: 12px;
+    }
+
+}

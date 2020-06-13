@@ -1,0 +1,134 @@
+.portfolio-gallery-box{
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+}
+
+.gallery-container{
+    margin:auto;
+    height: 320px;
+    display: block;
+    overflow: hidden;
+  }
+
+  .box-gallery{
+    width: 1340px;
+    height: 320px;
+    display: block;
+    transition: all 1s ease;
+    position: relative;
+    z-index: 5;
+  }
+    .item{
+      margin:auto;
+      position: absolute;
+      width: 200px;
+      height: 260px;
+      text-align: center;
+      
+    }
+    .item figure{
+        width: inherit;
+        height: inherit;
+        overflow: hidden;
+    }
+      .item h4{
+          padding: 3px 0;
+      }
+      .item img{
+          width:100%;
+      }
+        #item1{
+            left: 0;
+        }
+        #item2{
+            left: 220px;
+        }
+        #item3{
+            left: 440px;
+        }
+        #item4{
+            left: 660px;
+            
+        }
+        #item5{
+            left: 880px;
+        }
+          #item5 figure{
+            filter: blur(3px);
+          }
+        #item6{
+            left: 1100px;
+        }
+          #item6 figure{
+            filter: blur(3px);
+          }
+
+    .img-gallery{
+        transition: 0.3s ease;
+      }
+      .item:hover .img-gallery{
+        opacity: 0.5;
+        transform: scale(1.25);
+      } 
+
+      .item .navBar{
+        width: 100%;
+        height: 30px;
+        margin: auto;
+        padding-top: 10px;
+        font-weight: bold;
+        background: #A5A6A6;
+        position:relative;
+        top: -40px;
+        text-align: center;
+        display:flex;
+        justify-content: space-around;
+        opacity:0;
+        transition: 0.3s ease;
+      }
+      .item:hover .navBar{
+         opacity: 0.7;
+      }
+        .item .navBar p, .item .navBar a, .item .navBar a:visited{
+            color: white;
+            text-shadow: 4px 4px 5px 2px rgb(56, 56, 56);
+        }
+
+        .item .navBar p a:hover{           
+            cursor: pointer;
+            color: black;
+        }
+        .item .navBar .noLink{
+            cursor: text;
+            color: grey;
+        }
+        .item .navBar .noLink:hover{
+            cursor: text;
+            color: grey;
+        }
+
+
+  .controls{
+    position: absolute;
+    background-color: rgba(244, 165, 96, 0);
+    width: 680px;
+    height: 60px;
+    top: 370px;
+
+  }
+    .controls p{
+      display: inline-block;
+      font-size:2.5em;
+      font-weight: 900;
+      opacity:0.4;
+    }
+    .controls p:hover{
+      opacity: 1;
+    }
+        #next {
+          position: absolute;
+        }
+        #prev{
+          position: absolute;
+        }

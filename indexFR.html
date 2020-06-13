@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Juan Jose Mora - Web Dev</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+     initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet"  href="gallery.css"/>
+    <link rel="stylesheet"  href="mediaquery.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+</head>
+<body>
+<!-- Hidden Elements -->
+    <p id="language">FR</p>
+    <h1 id="main-title-hide"></h1>
+    
+    <div class="modal-box-gallery hidden-el" id="modal-box-gallery-id">
+        <div>
+            <span id="main-modal-box-close">
+                <i class="fas fa-times-circle" ></i>
+            </span>
+            <p id="pop-up-title">SECTION UNDER CONSTRUCTION</p>
+            <p id="pop-up-title">Coming soon</p>
+        </div>
+        
+    </div>
+<!-- Visible Elements -->
+    <div class="box-container" id="box-container-id">
+        <header class="header">
+            <section class="header-title">
+                
+                    <h1 id="main-title"></h1>
+                    <h4 id="sub-title">Welcome to my website</h4>
+                    <img src="img/Illustration.svg" alt="Juanjo Avatar" id="avatar">
+
+            </section>
+            <nav class="main-nav">
+                <section class="flags-section"> 
+                    <a href="indexES.html"><img class="flag-icon" id="flag-ES" src="img/icons8-spain-48.png" alt="language flag"></a>
+                    <a href="indexFR.html"><img class="flag-icon" id="flag-FR" src="img/icons8-france-48.png" alt="language flag"></a>
+                    <a href="index.html"><img class="flag-icon" id="flag-EN" src="img/icons8-great-britain-48.png" alt="language flag"></a>
+                </section>
+                
+                <label class="contact-portfolio">
+                    <p id="contact"><a class="contact-link-header" id="contact-link-about">About me</a></p>
+                </label>
+                <label class="contact-portfolio">
+                    <p id="myPortfolio"><a class="contact-link-header" id="contact-link-portfolio">My Portfolio</a></p>
+                </label>              
+            </nav>
+        </header>
+
+        <section class="info-box">
+            <section class="info-description">
+                <img src="img/Illustration2.svg" alt="Juanjo Avatar" id="avatar-mini">
+                <h3 class="info-box-name">Juan José Mora</h3>
+                <div class="info-box-name-city">
+                    <h4 id="prof-title">Web developer</h4>
+                    <p>PARIS</p>
+                </div> 
+                <button class="myButton" id="contact-link">Contact
+                </button>
+            </section>
+            <section class="info-skills">
+                <h3 id="skills-title">SKILLS</h3>
+                <section class="labels-skills">
+                    <span class="btn-skills" id="html">HTML5</span>
+                    <span class="btn-skills-bg"></span>
+                    <span class="btn-skills" id="css">CSS</span>
+                    <span class="btn-skills" id="javascript">JavaScript</span>
+                    <span class="btn-skills" id="photoshop">Photoshop</span>
+                    <span class="btn-skills" id="figma">Figma</span>
+                    <span class="btn-skills" id="php">PHP</span>
+                </section>
+            </section>
+
+            <section class="info-github">
+                <h3>GITHUB</h3>
+                <div class="link-box">
+                    <i class="fab fa-github"></i>
+                    <a rel="nofollow" href="https://github.com/jjmora" target="_blank">github.com/jjmora</a>
+                </div>
+            </section>
+
+            <section class="info-social">
+                <h3>SOCIAL</h3>
+                <div class="link-box">
+                    <i class="fas fa-address-card"></i>
+                    <a rel="nofollow" href="https://www.juanjosemora.es" target="_blank">juanjosemora.es</a>
+                </div>
+                <div class="link-box">
+                    <i class="fab fa-codepen"></i>
+                    <a rel="nofollow" href="https://www.codepen.io/juanmora" target="_blank">codepen.io/juanmora</a>
+                </div>
+            </section>
+            
+        </section>
+       
+        <main class="portfolio-gallery-box">
+            <div class="gallery-container">
+                <div class="box-gallery" id="box-gallery">
+                    <div class="item" id="item1">
+                        <h4>giurdanella.fr</h4> 
+                        <figure>                 
+                            <img src="img/giurdanella_crop.png" class="img-gallery" alt="website giurdanella.fr cours d'italien">
+                        </figure>  
+                        <nav class="navBar">
+                            <p>
+                                <a href="https://www.giurdanella.fr" target="_blank" class="nav-link">Visit</a>
+                            </p>
+                            <p class="noLink">Info</p>
+                        </nav>
+                    </div>
+              
+                    <div class="item" id="item2">
+                        <h4>tastyhour.es</h4>  
+                        <figure>
+                            <img src="img/tastyHour_crop.png" class="img-gallery" alt="website tasty hour - catering eco responsable" >
+                        </figure>
+                        <nav class="navBar">
+                            <p>
+                                <a href="https://www.tastyhour.es" target="_blank" class="nav-link">Visit</a>
+                            </p>
+                            <p class="noLink">Info</p>
+                        </nav>
+                    </div>
+              
+                    <div class="item" id="item3">
+                        <h4>Notas App</h4> 
+                        <figure>
+                            <img src="img/notasApp.png" class="img-gallery" alt="App for taking notes design">
+                        </figure> 
+                        <nav class="navBar">
+                            <p>
+                                <a href="https://www.juanjosemora.es/github/notasApp/index.html" target="_blank" class="nav-link">Visit</a>
+                            </p>
+                            <p class="noLink">Info</p>
+                        </nav>
+                    </div>
+                
+                    <div class="item" id="item4">
+                        <h4>Sudoku 4x4 Generator </h4> 
+                        <figure>
+                            <img src="img/sudoku4x4.png" class="img-gallery">
+                        </figure> 
+                        <nav class="navBar">
+                            <p>
+                                <a href="https://www.juanjosemora.es/github/sudoku4x4/index.html" target="_blank" class="nav-link">Visit</a>
+                            </p>
+                            <p class="noLink">Info</p>
+                        </nav>
+                    </div>
+                
+                    <div class="item" id="item5">
+                        <h4>japanpuzzles.com</h4>  
+                        <figure>
+                            <img src="img/japanpuzzles.png" class="img-gallery">
+                        </figure>
+                        <nav class="navBar">
+                            <p class="noLink">Coming soon</p>
+                            <!-- <p class="noLink">Visit</p> -->
+                            <!-- <p class="noLink">Info</p> -->
+                        </nav>
+                    </div>
+                    <div class="item" id="item6">
+                        <h4>Art Gallery</h4>
+                        <figure>
+                            <img src="img/arte.jpg" class="img-gallery"> 
+                        </figure>  
+                        <nav class="navBar">
+                            <p class="noLink">Coming soon</p>
+                            <!-- <p class="noLink">Visit</p> -->
+                            <!-- <p class="noLink">Info</p> -->
+                        </nav>           
+                    </div>
+                </div>
+            </div>
+            
+                <!-- CONTROLS -->
+            <div>
+                <div class="controls">
+                <p id="next" onclick="next()">
+                    <i class="fas fa-arrow-circle-right"></i> 
+                </p>
+                <p id="prev" onclick="prev()">
+                    <i class="fas fa-arrow-circle-left"></i>
+                </p>
+                </div> 
+            </div>
+                       
+            <footer class="footer">
+                <div class="footer-menu">
+                    <!-- <a id="home-link" href="indexES.html">Home</a>
+                    <span> | </span> -->
+                    <a >Juan José Mora - 2020</a>
+                    <span> | </span>
+                    <a id="gallery-link" >Gallery</a>
+                    <span> | </span>
+                    <span id="contact-link-footer">Contact</span>
+                    <span> | </span>
+                    <a id="jjm-app-link" >JJM App</a>
+                    <!-- <span> | </span> -->
+                    <!-- <a id="facebook-link" rel="nofollow" href="">Facebook</a> -->
+                </div>
+            </footer>
+
+        </main>
+
+    <!-- Hidden Elements -->
+        <section class="modal-box" id="modalBox">
+            <div class="modal-content">
+                <div id="close">
+                    <i class="fas fa-times-circle"></i>
+                </div>
+                <h2>Contact Form</h2>
+                <form class="modal-form" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfwZ4IAom1l2A_7ScSDKOB4HAXsvz-Jex2DXulOiImVLZ5Fog/formResponse" method="POST" target="_blank">
+                    <input type="text" name="entry.2005620554" placeholder="Name">
+                    <input type="email" name="entry.1045781291" placeholder="Email">
+                    <textarea name="entry.1415932155" placeholder="What can I do for you?"></textarea>
+                    <button type="submit" class="myButton">Send</button>
+                </form>
+
+            </div>
+            
+        </section>
+        
+    </div>
+
+
+    <script src="gallery.js"></script>
+
+      <script src="index.js"></script>
+</body>
+
+</html>
