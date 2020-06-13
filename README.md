@@ -1,2 +1,2 @@
 # juanjosemora.es
-My website - http://www.juanjosemora.es
+My website - https://www.juanjosemora.es
