@@ -13,6 +13,9 @@ a, a:visited{
 a:hover{
     color: black;
 }
+i{
+    cursor: pointer;
+}
 
 .box-container{
     margin: auto;
@@ -70,13 +73,11 @@ a:hover{
                 height: 35px;
                 width: 150px;
                 align-items: center;
-                background: rgb(245, 245, 247);
+                background: rgb(196, 196, 196);
                 border-radius: 10px; 
                 text-align: center;
                 margin-bottom: 5px;
-                cursor: pointer;
-                
-
+                cursor: pointer;               
             }
                 .contact-portfolio a{
                     color: black;
@@ -381,23 +382,39 @@ a:hover{
         position: absolute;
         margin-top: 100px;
         width: 100%;
-        height: 300px;
+        height: 200px;
         z-index: 15;
         
     }
-        .modal-box-gallery div{
+    .all-msg-modals-box, .info-msg-modal-box{
+        position: absolute;
+        margin-top: 100px;
+        width: 100%;
+        height: 200px;
+        z-index: 15;      
+    }
+        .modal-box-gallery .modal, .modal-info-message{
             width: 70%;
             margin: auto;
             height: 100%;
-            background: rgba(194, 194, 194, 0.9);
+            
             text-align: center;
             padding: 10px;
+        }
+        .modal-info-message, .modal-info-item1,.modal-info-item2,.modal-info-item3,.modal-info-item4,.modal-info-item5,.modal-info-item6 {
+            width: 50%;
+            margin: auto;
+            height: 300px;
+            text-align: center;
+            padding: 10px;
+            background: rgba(194, 194, 194, 0.9);
         }
 
         #modal-box-gallery-id{
             font-size: 26px;
         }
-        #main-modal-box-close{
+        .modal-box-close{
             font-size: 36px;
+            cursor: pointer;
         }
 /* ----- END MODAL ----- */

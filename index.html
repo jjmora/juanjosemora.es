@@ -11,44 +11,137 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 </head>
-<body>
+<body x-data="main()">
 <!-- Hidden Elements -->
     <p id="language">EN</p>
     <h1 id="main-title-hide"></h1>
     
     <div class="modal-box-gallery hidden-el" id="modal-box-gallery-id">
-        <div>
+        <div class="modal">
             <span id="main-modal-box-close">
                 <i class="fas fa-times-circle" ></i>
             </span>
             <p id="pop-up-title">SECTION UNDER CONSTRUCTION</p>
             <p id="pop-up-title">Coming soon</p>
-        </div>
-        
+        </div>   
     </div>
+
+    <!-- MODAL TO ACTIVATE WITH CLICK ON INFO BUTTON ON THE GALLERY -->
+    <div class="info-msg-modal-box hidden-el" x-bind:class="{'hidden-el':!aboutopen}" >
+        <div class="modal-info-message" @click.away="aboutopen = false">
+            <span @click="aboutopen = !aboutopen" class="modal-box-close">
+                <i class="fas fa-times-circle" ></i>
+            </span>
+            <p>About Me</p>
+        </div>
+    </div>
+
+    <div class="info-msg-modal-box hidden-el" x-bind:class="{'hidden-el':!portfopen}" >
+        <div class="modal-info-message" @click.away="portfopen = false">
+            <span @click="portfopen = !portfopen" class="modal-box-close">
+                <i class="fas fa-times-circle" ></i>
+            </span>
+            <p>Portfolio</p>
+        </div>
+    </div>
+
+    <div class="all-msg-modals-box hidden-el" x-bind:class="{'hidden-el':!giuropen}" >
+        <div class="modal-info-item1" @click.away="giuropen = false">
+            <span @click="giuropen = !giuropen" class="modal-box-close">
+                <i class="fas fa-times-circle" ></i>
+            </span>
+            <p>www.giurdanella.fr</p>
+            <p>Info Page under construction</p>
+        </div>
+    </div>
+
+    <div class="all-msg-modals-box hidden-el" x-bind:class="{'hidden-el':!tastyopen}">
+        <div class="modal-info-item2" @click.away="tastyopen = false">
+            <span @click="tastyopen = !tastyopen" class="modal-box-close">
+                <i class="fas fa-times-circle" ></i>
+            </span>
+            <p>www.tastyhour.es</p>
+            <p>Info Page under construction</p>
+        </div>
+    </div>
+
+    <div class="all-msg-modals-box hidden-el" x-bind:class="{'hidden-el':!notasopen}">
+        <div class="modal-info-item3" @click.away="notasopen = false">
+            <span @click="notasopen = !notasopen" class="modal-box-close">
+                <i class="fas fa-times-circle" ></i>
+            </span>
+            <p>Notas App</p>
+            <p>Info Page under construction</p>
+        </div>
+    </div>
+
+    <div class="all-msg-modals-box hidden-el" x-bind:class="{'hidden-el':!sudoku4x4open }">
+        <div class="modal-info-item4" @click.away="sudoku4x4open = false">
+            <span @click="sudoku4x4open = !sudoku4x4open" class="modal-box-close">
+                <i class="fas fa-times-circle" ></i>
+            </span>
+            <p>Sudoku 4x4</p>
+            <p>Info Page under construction</p>
+        </div>
+    </div>
+
+    <div class="all-msg-modals-box hidden-el" x-bind:class="{'hidden-el':!puzzlespdfopen}">
+        <div class="modal-info-item5" @click.away="puzzlespdfopen = false">
+            <span @click="puzzlespdfopen = !puzzlespdfopen" class="modal-box-close">
+                <i class="fas fa-times-circle" ></i>
+            </span>
+            <p>www.japanpuzzles.com</p>
+            <p>PDF puzzle generator</p>
+            <p>Info Page under construction</p>
+        </div>
+    </div>
+
+    <div class="all-msg-modals-box hidden-el" x-bind:class="{'hidden-el':!artgalopen}">
+        <div class="modal-info-item6" @click.away="artgalopen = false">
+            <span @click="artgalopen = !artgalopen" class="modal-box-close">
+                <i class="fas fa-times-circle" ></i>
+            </span>
+            <p>Art gallery</p>
+            <p>Info Page under construction</p>
+        </div>
+    </div>
+    
 <!-- Visible Elements -->
-    <div class="box-container" id="box-container-id">
+    <div class="box-container" id="box-container-id"  >
+   
+        <!-- PAGE CONTENT -->
         <header class="header">
             <section class="header-title">
                 
-                    <h1 id="main-title"></h1>
-                    <h4 id="sub-title">Welcome to my website</h4>
+                    <h1 id="main-title" x-text="mainTitle"></h1>
+                    <h4 id="sub-title" x-text="mainSubTitle">Welcome to my website</h4>
                     <img src="img/Illustration.svg" alt="Juanjo Avatar" id="avatar">
 
             </section>
             <nav class="main-nav">
                 <section class="flags-section"> 
-                    <a href="indexES.html"><img class="flag-icon" id="flag-ES" src="img/icons8-spain-48.png" alt="language flag"></a>
-                    <a href="indexFR.html"><img class="flag-icon" id="flag-FR" src="img/icons8-france-48.png" alt="language flag"></a>
-                    <a href="index.html"><img class="flag-icon" id="flag-EN" src="img/icons8-great-britain-48.png" alt="language flag"></a>
+                    <a>
+                        <img class="flag-icon" id="flag-ES" src="img/icons8-spain-48.png" alt="language flag" x-on:click="spanish()">
+                    </a>
+                    <a>
+                        <img class="flag-icon" id="flag-FR" src="img/icons8-france-48.png" alt="language flag" x-on:click="french()">
+                    </a>
+                    <a >
+                        <img class="flag-icon" id="flag-EN" src="img/icons8-great-britain-48.png" alt="language flag" x-on:click="english()">
+                    </a>
                 </section>
                 
-                <label class="contact-portfolio">
-                    <p id="contact"><a class="contact-link-header" id="contact-link-about">About me</a></p>
+                <label class="contact-portfolio" x-on:click="aboutopen = !aboutopen">
+                    <p id="contact">
+                        <a class="contact-link-header" id="contact-link-about"  x-text="about">About me</a>
+                    </p>
                 </label>
-                <label class="contact-portfolio">
-                    <p id="myPortfolio"><a class="contact-link-header" id="contact-link-portfolio">My Portfolio</a></p>
+                <label class="contact-portfolio" @click="portfopen = !portfopen">
+                    <p id="myPortfolio">
+                        <a class="contact-link-header" id="contact-link-portfolio"  x-text="portfolio">Porftolio</a>
+                    </p>
                 </label>              
             </nav>
         </header>
@@ -58,14 +151,14 @@
                 <img src="img/Illustration2.svg" alt="Juanjo Avatar" id="avatar-mini">
                 <h3 class="info-box-name">Juan José Mora</h3>
                 <div class="info-box-name-city">
-                    <h4 id="prof-title">Web developer</h4>
+                    <h4 id="prof-title" x-text="webDev">Web developer</h4>
                     <p>PARIS</p>
                 </div> 
                 <button class="myButton" id="contact-link">Contact
                 </button>
             </section>
             <section class="info-skills">
-                <h3 id="skills-title">SKILLS</h3>
+                <h3 id="skills-title" x-text="skills">SKILLS</h3>
                 <section class="labels-skills">
                     <span class="btn-skills" id="html">HTML5</span>
                     <span class="btn-skills-bg"></span>
@@ -109,9 +202,9 @@
                         </figure>  
                         <nav class="navBar">
                             <p>
-                                <a href="https://www.giurdanella.fr" target="_blank" class="nav-link">Visit</a>
+                                <a href="https://www.giurdanella.fr" target="_blank" class="nav-link" x-text="visit">Visit</a>
                             </p>
-                            <p class="noLink">Info</p>
+                            <p @click="giuropen = !giuropen"><a>Info</a></p>
                         </nav>
                     </div>
               
@@ -122,9 +215,9 @@
                         </figure>
                         <nav class="navBar">
                             <p>
-                                <a href="https://www.tastyhour.es" target="_blank" class="nav-link">Visit</a>
+                                <a href="https://www.tastyhour.es" target="_blank" class="nav-link" x-text="visit">Visit</a>
                             </p>
-                            <p class="noLink">Info</p>
+                            <p @click="tastyopen = !tastyopen"><a>Info</a></p>
                         </nav>
                     </div>
               
@@ -135,9 +228,9 @@
                         </figure> 
                         <nav class="navBar">
                             <p>
-                                <a href="https://www.juanjosemora.es/github/notasApp/index.html" target="_blank" class="nav-link">Visit</a>
+                                <a href="https://www.juanjosemora.es/github/notasApp/index.html" target="_blank" class="nav-link" x-text="visit">Visit</a>
                             </p>
-                            <p class="noLink">Info</p>
+                            <p @click="notasopen = !notasopen"><a>Info</a></p>
                         </nav>
                     </div>
                 
@@ -148,23 +241,25 @@
                         </figure> 
                         <nav class="navBar">
                             <p>
-                                <a href="https://www.juanjosemora.es/github/sudoku4x4/index.html" target="_blank" class="nav-link">Visit</a>
+                                <a href="https://www.juanjosemora.es/github/sudoku4x4/index.html" target="_blank" class="nav-link" x-text="visit">Visit</a>
                             </p>
-                            <p class="noLink">Info</p>
+                            <p @click="sudoku4x4open = !sudoku4x4open"><a>Info</a></p>
                         </nav>
                     </div>
                 
                     <div class="item" id="item5">
                         <h4>japanpuzzles.com</h4>  
                         <figure>
-                            <img src="img/japanpuzzles.png" class="img-gallery">
+                            <img src="img/puzzlePDFgenerator.png" class="img-gallery">
                         </figure>
                         <nav class="navBar">
-                            <p class="noLink">Coming soon</p>
-                            <!-- <p class="noLink">Visit</p> -->
-                            <!-- <p class="noLink">Info</p> -->
+                            <p>
+                                <a href="https://www.juanjosemora.es/github/puzzlePDFgenerator/index.html" target="_blank" class="nav-link" x-text="visit">Visit</a>
+                            </p>
+                            <p @click="puzzlespdfopen = !puzzlespdfopen"><a>Info</a></p>
                         </nav>
                     </div>
+                    
                     <div class="item" id="item6">
                         <h4>Art Gallery</h4>
                         <figure>
@@ -172,22 +267,22 @@
                         </figure>  
                         <nav class="navBar">
                             <p class="noLink">Coming soon</p>
-                            <!-- <p class="noLink">Visit</p> -->
-                            <!-- <p class="noLink">Info</p> -->
+                            <!-- <p>Visit</p> -->
+                            <p @click="artgalopen = !artgalopen"><a>Info</a></p>
                         </nav>           
                     </div>
                 </div>
             </div>
             
-                <!-- CONTROLS -->
+        <!-- CONTROLS -->
             <div>
                 <div class="controls">
-                <p id="next" onclick="next()">
-                    <i class="fas fa-arrow-circle-right"></i> 
-                </p>
-                <p id="prev" onclick="prev()">
-                    <i class="fas fa-arrow-circle-left"></i>
-                </p>
+                    <p id="next" onclick="next()">
+                        <i class="fas fa-arrow-circle-right"></i> 
+                    </p>
+                    <p id="prev" onclick="prev()">
+                        <i class="fas fa-arrow-circle-left"></i>
+                    </p>
                 </div> 
             </div>
                        
@@ -197,9 +292,9 @@
                     <span> | </span> -->
                     <a >Juan José Mora - 2020</a>
                     <span> | </span>
-                    <a id="gallery-link" >Gallery</a>
+                    <a id="gallery-link" x-text="gallery">Gallery</a>
                     <span> | </span>
-                    <span id="contact-link-footer">Contact</span>
+                    <span id="contact-link-footer" x-text="contact">Contact</span>
                     <span> | </span>
                     <a id="jjm-app-link" >JJM App</a>
                     <!-- <span> | </span> -->

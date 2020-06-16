@@ -54,9 +54,7 @@
         #item5{
             left: 880px;
         }
-          #item5 figure{
-            filter: blur(3px);
-          }
+
         #item6{
             left: 1100px;
         }
@@ -115,6 +113,7 @@
     width: 680px;
     height: 60px;
     top: 370px;
+    cursor: pointer;
 
   }
     .controls p{
